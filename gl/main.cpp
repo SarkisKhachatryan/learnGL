@@ -2,6 +2,10 @@
 #define GL_SILENCE_DEPRECATION
 #include <GLFW/glfw3.h>
 
+#ifdef __APPLE__
+#include <OpenGL/gl3.h>
+#include <OpenGL/gl3ext.h>
+#endif
 
 const char *vertexShaderSource = R"(
 #version 330 core
@@ -32,8 +36,10 @@ int main() {
     // version setup
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+#ifdef __APPLE__
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+#endif
     
     //init window
     GLFWwindow* window = glfwCreateWindow(1200, 800, "window", NULL, NULL);
@@ -44,19 +50,6 @@ int main() {
     }
     glfwMakeContextCurrent(window);
     
-    // VBO setup
-    float vertices[] = {
-        -0.5f, -0.5f, 0.0f,
-        0.5f, -0.5f, 0.0f,
-        0.0f, 0.5f, 0.0f
-    };
-    
-    unsigned int VBO;
-    glGenBuffers(1, &VBO);
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    
-    // copies vertex data(vertices) into the buffer’s(VBO) memory
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
     
     
     
@@ -110,31 +103,77 @@ int main() {
                   << std::endl;
     }
     
-    // delete shaders
+    // delete shaders afret linking
     glDeleteShader(vertexShader);
     glDeleteShader(fragmentShader);
     
-    // use tha shader program for the frames that will be rendered
-    glUseProgram(shaderProgram);
     
     
     
+    // VBO and VAO setup
+    float vertices[] = {
+        -0.5f, -0.5f, 0.0f,
+        0.5f, -0.5f, 0.0f,
+        0.0f, 0.5f, 0.0f
+    };
     
-    glViewport(0, 0, 1200, 800);
+    // create and bind VAO before VBO
+    unsigned int VAO;
+    glGenVertexArrays(1, &VAO);
+
+    unsigned int VBO;
+    glGenBuffers(1, &VBO);
     
-    glClearColor(0.2f, 0.3f, 0.4f, 1.0f);
-    glClear(GL_COLOR_BUFFER_BIT);
-//    glfwSwapBuffers(window);
+    glBindVertexArray(VAO);
+
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    // copies vertex data(vertices) into the buffer’s(VBO) memory
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+    
+    
+    // set the vertex attributes pointers
+    // 1) 0 as we set in shader layout (location = 0)
+    // 2) components per generic vertex attribute
+    // 3) type
+    // 4) normalize or not flag
+    // 5) stride (consecutive vertex attribute space)
+    // 6) offset of data(where it begins in buffer)
+    // @note last VBO bound to GL_ARRAY_BUFFER is used by function
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    // 0 is vertex attribute location (index)
+    glEnableVertexAttribArray(0);
+    
+    
+    // now we can unbind VBO
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
+    
+
     
     // reder loop
     while (!glfwWindowShouldClose(window)) {
         // inputs
         processInput(window);
         
+        // render
+        glClearColor(0.2f, 0.3f, 0.4f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        // draw
+        glUseProgram(shaderProgram);
+        glBindVertexArray(VAO); // TODO : uncomment to see why
+        glDrawArrays(GL_TRIANGLES, 0, 3);
+
+        
         // check events and swap buffer
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
+    
+    glDeleteVertexArrays(1, &VAO);
+    glDeleteBuffers(1, &VBO);
+    glDeleteProgram(shaderProgram);
     
     glfwDestroyWindow(window);
     glfwTerminate();
