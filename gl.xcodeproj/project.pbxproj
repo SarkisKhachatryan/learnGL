@@ -10,6 +10,7 @@
 		0F3727F42B9B4FAF00C38DE5 /* exercise_5_8__2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F3727F32B9B4FAF00C38DE5 /* exercise_5_8__2.cpp */; };
 		0F3727F82B9B523A00C38DE5 /* exercise_5_8__1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F3727F62B9B523A00C38DE5 /* exercise_5_8__1.cpp */; };
 		0F3727FB2B9B547000C38DE5 /* main_till_5_8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F3727F92B9B547000C38DE5 /* main_till_5_8.cpp */; };
+		0F3727FE2B9B6D7A00C38DE5 /* exercise_5_8__3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F3727FC2B9B6D7A00C38DE5 /* exercise_5_8__3.cpp */; };
 		0F94C3AA2B9613E6002E4D10 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F94C3A92B9613E6002E4D10 /* main.cpp */; };
 		0F94C3B22B9613F5002E4D10 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F94C3B12B9613F5002E4D10 /* OpenGL.framework */; };
 		0F94C3B42B9614A9002E4D10 /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F94C3B32B9614A9002E4D10 /* libglfw.3.4.dylib */; };
@@ -34,6 +35,8 @@
 		0F3727F72B9B523A00C38DE5 /* exercise_5_8__1.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = exercise_5_8__1.hpp; sourceTree = "<group>"; };
 		0F3727F92B9B547000C38DE5 /* main_till_5_8.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main_till_5_8.cpp; sourceTree = "<group>"; };
 		0F3727FA2B9B547000C38DE5 /* main_till_5_8.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = main_till_5_8.hpp; sourceTree = "<group>"; };
+		0F3727FC2B9B6D7A00C38DE5 /* exercise_5_8__3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = exercise_5_8__3.cpp; sourceTree = "<group>"; };
+		0F3727FD2B9B6D7A00C38DE5 /* exercise_5_8__3.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = exercise_5_8__3.hpp; sourceTree = "<group>"; };
 		0F94C3A62B9613E6002E4D10 /* gl */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gl; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F94C3A92B9613E6002E4D10 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		0F94C3B12B9613F5002E4D10 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -79,6 +82,8 @@
 				0F3727F32B9B4FAF00C38DE5 /* exercise_5_8__2.cpp */,
 				0F3727F52B9B50F100C38DE5 /* exercise_5_8__2.hpp */,
 				0F3727F62B9B523A00C38DE5 /* exercise_5_8__1.cpp */,
+				0F3727FC2B9B6D7A00C38DE5 /* exercise_5_8__3.cpp */,
+				0F3727FD2B9B6D7A00C38DE5 /* exercise_5_8__3.hpp */,
 				0F3727F72B9B523A00C38DE5 /* exercise_5_8__1.hpp */,
 			);
 			path = gl;
@@ -154,6 +159,7 @@
 				0F3727F82B9B523A00C38DE5 /* exercise_5_8__1.cpp in Sources */,
 				0F3727FB2B9B547000C38DE5 /* main_till_5_8.cpp in Sources */,
 				0F3727F42B9B4FAF00C38DE5 /* exercise_5_8__2.cpp in Sources */,
+				0F3727FE2B9B6D7A00C38DE5 /* exercise_5_8__3.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

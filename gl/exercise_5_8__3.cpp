@@ -1,16 +1,17 @@
 //
-//  exercise_5_8__2.cpp
+//  exercise_5_8__3.cpp
 //  gl
 //
 //  Created by Sargis Khachatryan on 08.03.24.
 //
 
-// Now create the same 2 triangles using two different VAOs and VBOs for their data.
 
+// Create two shader programs where the second program uses a different fragment shader
+// that outputs the color yellow; draw both triangles again where one outputs the color yellow.
 
-#include "exercise_5_8__2.hpp"
+#include "exercise_5_8__3.hpp"
 
-namespace exercise_5_8__2 {
+namespace exercise_5_8__3 {
 
 const char *vertexShaderSource = R"(
 #version 330 core
@@ -20,11 +21,19 @@ void main() {
 }
 )";
 
-const char *fragmentShaderSource = R"(
+const char *fragmentShaderSource1 = R"(
 #version 330 core
 out vec4 FragColor;
 void main() {
     FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);
+}
+)";
+
+const char *fragmentShaderSource2 = R"(
+#version 330 core
+out vec4 FragColor;
+void main() {
+    FragColor = vec4(0.3f, 0.2f, 1.0f, 1.0f);
 }
 )";
 
@@ -34,7 +43,7 @@ void processInput(GLFWwindow *window) {
     }
 }
 
-int exercise_5_8__2() {
+int exercise_5_8__3() {
     glfwInit();
     
     // version setup
@@ -77,14 +86,28 @@ int exercise_5_8__2() {
     
     
     // initialize, compile and check fragment shader
-    unsigned int fragmentShader;
-    fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-    glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
-    glCompileShader(fragmentShader);
+    unsigned int fragmentShader1;
+    fragmentShader1 = glCreateShader(GL_FRAGMENT_SHADER);
+    glShaderSource(fragmentShader1, 1, &fragmentShaderSource1, NULL);
+    glCompileShader(fragmentShader1);
     
-    glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
+    glGetShaderiv(fragmentShader1, GL_COMPILE_STATUS, &success);
     if(!success) {
-        glGetShaderInfoLog(fragmentShader, 512, NULL, infoLog);
+        glGetShaderInfoLog(fragmentShader1, 512, NULL, infoLog);
+        std::cout << "ERROR::SHADER::FRAGMENT::COMPILATION_FAILED\n"
+        << infoLog
+        << std::endl;
+    }
+    
+    
+    unsigned int fragmentShader2;
+    fragmentShader2 = glCreateShader(GL_FRAGMENT_SHADER);
+    glShaderSource(fragmentShader2, 1, &fragmentShaderSource2, NULL);
+    glCompileShader(fragmentShader2);
+    
+    glGetShaderiv(fragmentShader2, GL_COMPILE_STATUS, &success);
+    if(!success) {
+        glGetShaderInfoLog(fragmentShader2, 512, NULL, infoLog);
         std::cout << "ERROR::SHADER::FRAGMENT::COMPILATION_FAILED\n"
         << infoLog
         << std::endl;
@@ -92,26 +115,47 @@ int exercise_5_8__2() {
     
     
     // create shader program an link shaders to it and use it
-    unsigned int shaderProgram;
-    shaderProgram = glCreateProgram();
+    // in this case to be able to generate different colors
+    unsigned int shaderProgram1;
+    shaderProgram1 = glCreateProgram();
     
-    glAttachShader(shaderProgram, vertexShader);
-    glAttachShader(shaderProgram, fragmentShader);
-    glLinkProgram(shaderProgram);
+    glAttachShader(shaderProgram1, vertexShader);
+    glAttachShader(shaderProgram1, fragmentShader1);
     
-    glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
+    glLinkProgram(shaderProgram1);
+    
+    glGetProgramiv(shaderProgram1, GL_LINK_STATUS, &success);
     if(!success) {
-        glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
+        glGetProgramInfoLog(shaderProgram1, 512, NULL, infoLog);
         std::cout << "ERROR::SHADER::PROGRAM::LINK_FAILED\n"
         << infoLog
         << std::endl;
     }
     
-    // delete shaders afret linking
+    
+    // second shader program
+    unsigned int shaderProgram2;
+    shaderProgram2 = glCreateProgram();
+
+    glAttachShader(shaderProgram2, vertexShader);
+    glAttachShader(shaderProgram2, fragmentShader2);
+    
+    glLinkProgram(shaderProgram2);
+
+    glGetProgramiv(shaderProgram2, GL_LINK_STATUS, &success);
+    if(!success) {
+        glGetProgramInfoLog(shaderProgram2, 512, NULL, infoLog);
+        std::cout << "ERROR::SHADER::PROGRAM::LINK_FAILED\n"
+        << infoLog
+        << std::endl;
+    }
+    
+    
+    // delete shaders after linking
     glDeleteShader(vertexShader);
-    glDeleteShader(fragmentShader);
-    
-    
+    glDeleteShader(fragmentShader1);
+    glDeleteShader(fragmentShader2);
+
     
     
     float vertices1[] = {
@@ -186,9 +230,6 @@ int exercise_5_8__2() {
     glBindVertexArray(0);
     
     
-    // for drawing only lines uncomment this line draw primitives as lines
-    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-    
     // reder loop
     while (!glfwWindowShouldClose(window)) {
         // inputs
@@ -199,11 +240,14 @@ int exercise_5_8__2() {
         glClear(GL_COLOR_BUFFER_BIT);
         
         // draw
-        glUseProgram(shaderProgram);
+        // use first shader program
+        glUseProgram(shaderProgram1);
         
         glBindVertexArray(VAO1);
         glDrawArrays(GL_TRIANGLES, 0, 3);
         
+        // use second shader program
+        glUseProgram(shaderProgram2);
         
         glBindVertexArray(VAO2);
         glDrawArrays(GL_TRIANGLES, 0, 3);
@@ -219,11 +263,12 @@ int exercise_5_8__2() {
     glDeleteVertexArrays(1, &VAO2);
     glDeleteBuffers(1, &VBO2);
     
-    glDeleteProgram(shaderProgram);
-    
+    glDeleteProgram(shaderProgram1);
+    glDeleteProgram(shaderProgram2);
+
     glfwDestroyWindow(window);
     glfwTerminate();
     return 0;
 }
 
-} // namespace exercise_5_8__2
+} // namespace exercise_5_8__3

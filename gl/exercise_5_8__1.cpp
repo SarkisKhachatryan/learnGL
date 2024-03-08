@@ -5,6 +5,8 @@
 //  Created by Sargis Khachatryan on 08.03.24.
 //
 
+// Try to draw 2 triangles next to each other using glDrawArrays by adding more vertices to your data
+
 #include "exercise_5_8__1.hpp"
 
 
@@ -130,9 +132,6 @@ int exercise_5_8__1() {
     
     unsigned int VBO;
     glGenBuffers(1, &VBO);
-    
-    unsigned int EBO;
-    glGenBuffers(1, &EBO);
     
     // bind VAO
     glBindVertexArray(VAO);
