@@ -111,25 +111,48 @@ int main() {
     
     
     // VBO and VAO setup
+    /* without EBO
     float vertices[] = {
         -0.5f, -0.5f, 0.0f,
         0.5f, -0.5f, 0.0f,
         0.0f, 0.5f, 0.0f
     };
+    */
     
-    // create and bind VAO before VBO
+    float vertices[] = {
+        0.5f, 0.5f, 0.0f, // top right
+        0.5f, -0.5f, 0.0f, // bottom right
+        -0.5f, -0.5f, 0.0f, // bottom left
+        -0.5f, 0.5f, 0.0f // top left
+    };
+    
+    unsigned int indices[] = { // note that we start from 0!
+        0, 1, 3, // first triangle
+        1, 2, 3 // second triangle
+    };
+    
+    // create and bind VAO before VBO, EBO
     unsigned int VAO;
     glGenVertexArrays(1, &VAO);
 
     unsigned int VBO;
     glGenBuffers(1, &VBO);
     
+    unsigned int EBO;
+    glGenBuffers(1, &EBO);
+    
+    // bind VAO
     glBindVertexArray(VAO);
 
+    // bind VBO
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     // copies vertex data(vertices) into the buffer’s(VBO) memory
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
+    // bind EBO
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+    // copy indeces into buffer
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
     
     
     // set the vertex attributes pointers
@@ -149,7 +172,9 @@ int main() {
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
     
-
+    
+    // for drawing only lines uncomment this line draw primitives as lines
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     
     // reder loop
     while (!glfwWindowShouldClose(window)) {
@@ -162,9 +187,20 @@ int main() {
 
         // draw
         glUseProgram(shaderProgram);
-        glBindVertexArray(VAO); // TODO : uncomment to see why
+        glBindVertexArray(VAO);
+        
+        /* without EBO
+        this call not needed, if we want to draw from EBO
+        the call to glDrawElements is needed
         glDrawArrays(GL_TRIANGLES, 0, 3);
-
+        */
+        
+        // render the triangles from an index buffer.
+        // 1) mode to draw (triangles)
+        // 2) 6 vertices in total to draw
+        // 3) type of indeces
+        // 4) offset of buffer
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
         
         // check events and swap buffer
         glfwSwapBuffers(window);
