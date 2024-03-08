@@ -111,20 +111,31 @@ int main() {
     
     
     // VBO and VAO setup
-    /* without EBO
-    float vertices[] = {
-        -0.5f, -0.5f, 0.0f,
-        0.5f, -0.5f, 0.0f,
-        0.0f, 0.5f, 0.0f
-    };
-    */
+    /* without EBO     */
+//    float vertices[] = {
+//        -0.5f, -0.5f, 0.0f,
+//        0.5f, -0.5f, 0.0f,
+//        0.0f, 0.5f, 0.0f
+//    };
     
-    float vertices[] = {
-        0.5f, 0.5f, 0.0f, // top right
-        0.5f, -0.5f, 0.0f, // bottom right
-        -0.5f, -0.5f, 0.0f, // bottom left
-        -0.5f, 0.5f, 0.0f // top left
-    };
+    
+    /* to draw 2 triangles with glDrawArrays call (change 3rd argument to 6)*/
+//    float vertices[] = {
+//        0.5f, 0.5f, 0.0f, // top right
+//        0.5f, -0.5f, 0.0f, // bottom right
+//        -0.5f, -0.5f, 0.0f, // bottom left
+//        -0.5f, 0.5f, 0.0f, // top left
+//        -0.5f, -0.5f, 0.0f, // bottom left
+//        0.5f, 0.5f, 0.0f // top right
+//    };
+    
+   float vertices[] = {
+       0.5f, 0.5f, 0.0f, // top right
+       0.5f, -0.5f, 0.0f, // bottom right
+       -0.5f, -0.5f, 0.0f, // bottom left
+       -0.5f, 0.5f, 0.0f, // top left
+   };
+
     
     unsigned int indices[] = { // note that we start from 0!
         0, 1, 3, // first triangle
@@ -192,8 +203,9 @@ int main() {
         /* without EBO
         this call not needed, if we want to draw from EBO
         the call to glDrawElements is needed
-        glDrawArrays(GL_TRIANGLES, 0, 3);
         */
+//      glDrawArrays(GL_TRIANGLES, 0, 6);
+
         
         // render the triangles from an index buffer.
         // 1) mode to draw (triangles)
