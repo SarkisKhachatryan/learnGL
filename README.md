@@ -1,1 +1,9 @@
 # learnGL
+
+# 1) first triangle
+<img width="1200" alt="Screenshot 2024-03-06 at 01 08 25" src="https://github.com/SarkisKhachatryan/learnGL/assets/53656092/670f4e8f-fc97-4a83-86a5-53aa55a21fb5">
+
+# 2) 2 triangles
+<img width="1197" alt="Screenshot 2024-03-08 at 16 01 07" src="https://github.com/SarkisKhachatryan/learnGL/assets/53656092/ea8d4d09-ad4e-42d3-a0ec-bb5e6f701119">
+
+<img width="1195" alt="Screenshot 2024-03-08 at 16 01 22" src="https://github.com/SarkisKhachatryan/learnGL/assets/53656092/9aa34a59-9c42-4cda-81af-66d67d0c2111">
