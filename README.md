@@ -19,3 +19,9 @@
 
 https://github.com/SarkisKhachatryan/learnGL/assets/53656092/b0c50985-5c65-47dc-87c4-a5c9aad9820f
 
+# 5) Use vertex shader to pass color trough, storing color information in vertices, on location 1, fragment interpolation in action.
+
+<img width="1194" alt="Screenshot 2024-03-09 at 23 41 20" src="https://github.com/SarkisKhachatryan/learnGL/assets/53656092/4fb8432b-18a5-417c-b629-e8e3bfe9695c">
+
+# 6) exercises done
+1) Adjust the vertex shader so that the triangle is upside down.
