@@ -11,6 +11,12 @@
 		0F3727F82B9B523A00C38DE5 /* exercise_5_8__1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F3727F62B9B523A00C38DE5 /* exercise_5_8__1.cpp */; };
 		0F3727FB2B9B547000C38DE5 /* main_till_5_8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F3727F92B9B547000C38DE5 /* main_till_5_8.cpp */; };
 		0F3727FE2B9B6D7A00C38DE5 /* exercise_5_8__3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F3727FC2B9B6D7A00C38DE5 /* exercise_5_8__3.cpp */; };
+		0F3728012B9CBE8300C38DE5 /* main_till_6_5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F3727FF2B9CBE8300C38DE5 /* main_till_6_5.cpp */; };
+		0F3728042B9CBFB400C38DE5 /* main_till_6_8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F3728022B9CBFB400C38DE5 /* main_till_6_8.cpp */; };
+		0F3728072B9CECF900C38DE5 /* shader_class.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F3728052B9CECF900C38DE5 /* shader_class.cpp */; };
+		0F37280D2B9CF5A200C38DE5 /* master.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F37280B2B9CF5A200C38DE5 /* master.cpp */; };
+		0F3728102B9CF66B00C38DE5 /* exercise_6_8__1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F37280E2B9CF66B00C38DE5 /* exercise_6_8__1.cpp */; };
+		0F3728142B9CF7D100C38DE5 /* exercise_6_8__2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F3728122B9CF7D100C38DE5 /* exercise_6_8__2.cpp */; };
 		0F94C3AA2B9613E6002E4D10 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F94C3A92B9613E6002E4D10 /* main.cpp */; };
 		0F94C3B22B9613F5002E4D10 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F94C3B12B9613F5002E4D10 /* OpenGL.framework */; };
 		0F94C3B42B9614A9002E4D10 /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F94C3B32B9614A9002E4D10 /* libglfw.3.4.dylib */; };
@@ -37,6 +43,21 @@
 		0F3727FA2B9B547000C38DE5 /* main_till_5_8.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = main_till_5_8.hpp; sourceTree = "<group>"; };
 		0F3727FC2B9B6D7A00C38DE5 /* exercise_5_8__3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = exercise_5_8__3.cpp; sourceTree = "<group>"; };
 		0F3727FD2B9B6D7A00C38DE5 /* exercise_5_8__3.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = exercise_5_8__3.hpp; sourceTree = "<group>"; };
+		0F3727FF2B9CBE8300C38DE5 /* main_till_6_5.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main_till_6_5.cpp; sourceTree = "<group>"; };
+		0F3728002B9CBE8300C38DE5 /* main_till_6_5.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = main_till_6_5.hpp; sourceTree = "<group>"; };
+		0F3728022B9CBFB400C38DE5 /* main_till_6_8.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main_till_6_8.cpp; sourceTree = "<group>"; };
+		0F3728032B9CBFB400C38DE5 /* main_till_6_8.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = main_till_6_8.hpp; sourceTree = "<group>"; };
+		0F3728052B9CECF900C38DE5 /* shader_class.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = shader_class.cpp; sourceTree = "<group>"; };
+		0F3728062B9CECF900C38DE5 /* shader_class.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = shader_class.hpp; sourceTree = "<group>"; };
+		0F3728092B9CEF3800C38DE5 /* vShader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = vShader.vsh; sourceTree = "<group>"; };
+		0F37280A2B9CEF5D00C38DE5 /* fShader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = fShader.fsh; sourceTree = "<group>"; };
+		0F37280B2B9CF5A200C38DE5 /* master.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = master.cpp; sourceTree = "<group>"; };
+		0F37280C2B9CF5A200C38DE5 /* master.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = master.hpp; sourceTree = "<group>"; };
+		0F37280E2B9CF66B00C38DE5 /* exercise_6_8__1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = exercise_6_8__1.cpp; sourceTree = "<group>"; };
+		0F37280F2B9CF66B00C38DE5 /* exercise_6_8__1.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = exercise_6_8__1.hpp; sourceTree = "<group>"; };
+		0F3728112B9CF6D300C38DE5 /* vShader_upside_down.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = vShader_upside_down.vsh; sourceTree = "<group>"; };
+		0F3728122B9CF7D100C38DE5 /* exercise_6_8__2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = exercise_6_8__2.cpp; sourceTree = "<group>"; };
+		0F3728132B9CF7D100C38DE5 /* exercise_6_8__2.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = exercise_6_8__2.hpp; sourceTree = "<group>"; };
 		0F94C3A62B9613E6002E4D10 /* gl */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gl; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F94C3A92B9613E6002E4D10 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		0F94C3B12B9613F5002E4D10 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -78,9 +99,24 @@
 			children = (
 				0F94C3A92B9613E6002E4D10 /* main.cpp */,
 				0F3727F92B9B547000C38DE5 /* main_till_5_8.cpp */,
+				0F3728022B9CBFB400C38DE5 /* main_till_6_8.cpp */,
+				0F3728032B9CBFB400C38DE5 /* main_till_6_8.hpp */,
+				0F37280B2B9CF5A200C38DE5 /* master.cpp */,
+				0F37280C2B9CF5A200C38DE5 /* master.hpp */,
+				0F3728052B9CECF900C38DE5 /* shader_class.cpp */,
+				0F3728062B9CECF900C38DE5 /* shader_class.hpp */,
+				0F3728092B9CEF3800C38DE5 /* vShader.vsh */,
+				0F3728112B9CF6D300C38DE5 /* vShader_upside_down.vsh */,
+				0F37280A2B9CEF5D00C38DE5 /* fShader.fsh */,
 				0F3727FA2B9B547000C38DE5 /* main_till_5_8.hpp */,
 				0F3727F32B9B4FAF00C38DE5 /* exercise_5_8__2.cpp */,
+				0F3727FF2B9CBE8300C38DE5 /* main_till_6_5.cpp */,
+				0F3728002B9CBE8300C38DE5 /* main_till_6_5.hpp */,
 				0F3727F52B9B50F100C38DE5 /* exercise_5_8__2.hpp */,
+				0F37280E2B9CF66B00C38DE5 /* exercise_6_8__1.cpp */,
+				0F3728122B9CF7D100C38DE5 /* exercise_6_8__2.cpp */,
+				0F3728132B9CF7D100C38DE5 /* exercise_6_8__2.hpp */,
+				0F37280F2B9CF66B00C38DE5 /* exercise_6_8__1.hpp */,
 				0F3727F62B9B523A00C38DE5 /* exercise_5_8__1.cpp */,
 				0F3727FC2B9B6D7A00C38DE5 /* exercise_5_8__3.cpp */,
 				0F3727FD2B9B6D7A00C38DE5 /* exercise_5_8__3.hpp */,
@@ -156,9 +192,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F94C3AA2B9613E6002E4D10 /* main.cpp in Sources */,
+				0F3728102B9CF66B00C38DE5 /* exercise_6_8__1.cpp in Sources */,
+				0F37280D2B9CF5A200C38DE5 /* master.cpp in Sources */,
+				0F3728042B9CBFB400C38DE5 /* main_till_6_8.cpp in Sources */,
 				0F3727F82B9B523A00C38DE5 /* exercise_5_8__1.cpp in Sources */,
 				0F3727FB2B9B547000C38DE5 /* main_till_5_8.cpp in Sources */,
 				0F3727F42B9B4FAF00C38DE5 /* exercise_5_8__2.cpp in Sources */,
+				0F3728072B9CECF900C38DE5 /* shader_class.cpp in Sources */,
+				0F3728012B9CBE8300C38DE5 /* main_till_6_5.cpp in Sources */,
+				0F3728142B9CF7D100C38DE5 /* exercise_6_8__2.cpp in Sources */,
 				0F3727FE2B9B6D7A00C38DE5 /* exercise_5_8__3.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
