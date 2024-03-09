@@ -15,3 +15,7 @@
 
 <img width="1197" alt="Screenshot 2024-03-08 at 20 28 21" src="https://github.com/SarkisKhachatryan/learnGL/assets/53656092/79d45dec-75b2-4526-9423-06992fd8ac89">
 
+# 4) Change collors with uniforms, depending on time
+
+https://github.com/SarkisKhachatryan/learnGL/assets/53656092/b0c50985-5c65-47dc-87c4-a5c9aad9820f
+
