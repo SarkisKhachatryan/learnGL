@@ -25,3 +25,11 @@ https://github.com/SarkisKhachatryan/learnGL/assets/53656092/b0c50985-5c65-47dc-
 
 # 6) exercises done
 1) Adjust the vertex shader so that the triangle is upside down.
+2) Specify a horizontal offset via a uniform and move the triangle to the right side of the screen in the vertex shader using this offset value.
+3) Output the vertex position to the fragment shader using the out keyword and set the fragment’s color equal to this vertex position (see how even the vertex position values are interpolated across the triangle). Once you managed to do this;
+try to answer the following question: why is the bottom-left side of our triangle black?
+
+# 7) learn about textures and here is the result
+
+<img width="1195" alt="Screenshot 2024-03-11 at 01 59 57" src="https://github.com/SarkisKhachatryan/learnGL/assets/53656092/7775dd74-510e-4077-9f36-e4c5fb1544ed">
+
