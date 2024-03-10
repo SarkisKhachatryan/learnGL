@@ -1,19 +1,19 @@
 //
-//  master.cpp
+//  main_till_7_7.cpp
 //  gl
 //
-//  Created by Sargis Khachatryan on 09.03.24.
+//  Created by Sargis Khachatryan on 11.03.24.
 //
 
-#include "master.hpp"
+#include "main_till_7_7.hpp"
 
 #include "shader_class.hpp"
 
 // coment or uncomment this define preprocessor whenever you want to run this file
-//#define STB_IMAGE_IMPLEMENTATION
+#define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.hpp"
 
-namespace master {
+namespace main_till_7_7 {
 
 void processInput(GLFWwindow *window) {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
@@ -21,7 +21,7 @@ void processInput(GLFWwindow *window) {
     }
 }
 
-int master() {
+int main_till_7_7() {
     
     glfwInit();
     
@@ -106,7 +106,7 @@ int master() {
     
     
     
-//     generate texture
+//     generate bind and configure texture
     unsigned int texture1;
     glGenTextures(1, &texture1);
     
@@ -145,12 +145,6 @@ int master() {
     
     
     
-    // for drawing only lines uncomment this line draw primitives as lines with GL_LINES
-    glPolygonMode(GL_FRONT_AND_BACK, GL_LINES); // or use GL_FILL
-    
-//    shaderProgram.use(); // don't forget to activate/use the shader before setting uniforms!
-//    shaderProgram.setInt("texture1", 0);
-    
     // reder loop
     while (!glfwWindowShouldClose(window)) {
         // inputs
@@ -159,10 +153,6 @@ int master() {
         // render
         glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
-        
-        // bind Texture
-//        glActiveTexture(GL_TEXTURE0);
-//        glBindTexture(GL_TEXTURE_2D, texture1);
         
         // draw
         shaderProgram.use();
@@ -189,4 +179,4 @@ int master() {
     return 0;
 }
 
-} // namespace master
+} // namespace main_till_7_7

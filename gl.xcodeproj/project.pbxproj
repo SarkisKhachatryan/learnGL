@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F29DCD72B9E63320090F75A /* main_till_7_7.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F29DCD52B9E63320090F75A /* main_till_7_7.cpp */; };
 		0F3727F42B9B4FAF00C38DE5 /* exercise_5_8__2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F3727F32B9B4FAF00C38DE5 /* exercise_5_8__2.cpp */; };
 		0F3727F82B9B523A00C38DE5 /* exercise_5_8__1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F3727F62B9B523A00C38DE5 /* exercise_5_8__1.cpp */; };
 		0F3727FB2B9B547000C38DE5 /* main_till_5_8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F3727F92B9B547000C38DE5 /* main_till_5_8.cpp */; };
@@ -36,6 +37,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0F29DCD52B9E63320090F75A /* main_till_7_7.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main_till_7_7.cpp; sourceTree = "<group>"; };
+		0F29DCD62B9E63320090F75A /* main_till_7_7.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = main_till_7_7.hpp; sourceTree = "<group>"; };
 		0F3727F32B9B4FAF00C38DE5 /* exercise_5_8__2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = exercise_5_8__2.cpp; sourceTree = "<group>"; };
 		0F3727F52B9B50F100C38DE5 /* exercise_5_8__2.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = exercise_5_8__2.hpp; sourceTree = "<group>"; };
 		0F3727F62B9B523A00C38DE5 /* exercise_5_8__1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = exercise_5_8__1.cpp; sourceTree = "<group>"; };
@@ -63,6 +66,10 @@
 		0F3728162B9E196300C38DE5 /* exercise_6_8__3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = exercise_6_8__3.cpp; sourceTree = "<group>"; };
 		0F3728172B9E196300C38DE5 /* exercise_6_8__3.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = exercise_6_8__3.hpp; sourceTree = "<group>"; };
 		0F3728192B9E19CF00C38DE5 /* vShader_pass.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = vShader_pass.vsh; sourceTree = "<group>"; };
+		0F37281A2B9E487B00C38DE5 /* stb_image.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = stb_image.hpp; sourceTree = "<group>"; };
+		0F37281B2B9E4D2000C38DE5 /* container.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = container.jpg; sourceTree = "<group>"; };
+		0F37281C2B9E51F600C38DE5 /* vShader_v2.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = vShader_v2.vsh; sourceTree = "<group>"; };
+		0F37281D2B9E520C00C38DE5 /* fShader_v2.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = fShader_v2.fsh; sourceTree = "<group>"; };
 		0F94C3A62B9613E6002E4D10 /* gl */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gl; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F94C3A92B9613E6002E4D10 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		0F94C3B12B9613F5002E4D10 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -106,15 +113,21 @@
 				0F3727F92B9B547000C38DE5 /* main_till_5_8.cpp */,
 				0F3728022B9CBFB400C38DE5 /* main_till_6_8.cpp */,
 				0F3728032B9CBFB400C38DE5 /* main_till_6_8.hpp */,
+				0F29DCD52B9E63320090F75A /* main_till_7_7.cpp */,
+				0F29DCD62B9E63320090F75A /* main_till_7_7.hpp */,
+				0F37281A2B9E487B00C38DE5 /* stb_image.hpp */,
 				0F37280B2B9CF5A200C38DE5 /* master.cpp */,
 				0F37280C2B9CF5A200C38DE5 /* master.hpp */,
 				0F3728052B9CECF900C38DE5 /* shader_class.cpp */,
 				0F3728062B9CECF900C38DE5 /* shader_class.hpp */,
 				0F3728092B9CEF3800C38DE5 /* vShader.vsh */,
+				0F37281C2B9E51F600C38DE5 /* vShader_v2.vsh */,
 				0F3728192B9E19CF00C38DE5 /* vShader_pass.vsh */,
 				0F3728152B9E180300C38DE5 /* vShader_offset.vsh */,
 				0F3728112B9CF6D300C38DE5 /* vShader_upside_down.vsh */,
+				0F37281B2B9E4D2000C38DE5 /* container.jpg */,
 				0F37280A2B9CEF5D00C38DE5 /* fShader.fsh */,
+				0F37281D2B9E520C00C38DE5 /* fShader_v2.fsh */,
 				0F3727FA2B9B547000C38DE5 /* main_till_5_8.hpp */,
 				0F3727F32B9B4FAF00C38DE5 /* exercise_5_8__2.cpp */,
 				0F3727FF2B9CBE8300C38DE5 /* main_till_6_5.cpp */,
@@ -208,6 +221,7 @@
 				0F3727F82B9B523A00C38DE5 /* exercise_5_8__1.cpp in Sources */,
 				0F3727FB2B9B547000C38DE5 /* main_till_5_8.cpp in Sources */,
 				0F3727F42B9B4FAF00C38DE5 /* exercise_5_8__2.cpp in Sources */,
+				0F29DCD72B9E63320090F75A /* main_till_7_7.cpp in Sources */,
 				0F3728072B9CECF900C38DE5 /* shader_class.cpp in Sources */,
 				0F3728012B9CBE8300C38DE5 /* main_till_6_5.cpp in Sources */,
 				0F3728142B9CF7D100C38DE5 /* exercise_6_8__2.cpp in Sources */,
