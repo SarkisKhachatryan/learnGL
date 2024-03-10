@@ -1,15 +1,15 @@
 //
-//  exercise_6_8__2.cpp
+//  exercise_6_8__3.cpp
 //  gl
 //
 //  Created by Sargis Khachatryan on 09.03.24.
 //
 
-#include "exercise_6_8__2.hpp"
+#include "exercise_6_8__3.hpp"
 
 #include "shader_class.hpp"
 
-namespace exercise_6_8__2 {
+namespace exercise_6_8__3 {
 
 void processInput(GLFWwindow *window) {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
@@ -17,7 +17,7 @@ void processInput(GLFWwindow *window) {
     }
 }
 
-int exercise_6_8__2() {
+int exercise_6_8__3() {
     
     glfwInit();
     
@@ -40,12 +40,12 @@ int exercise_6_8__2() {
     
     
     // use encapsulated shader class for compilation and linking of shaders
-    shader_class::Shader shaderProgram("/Users/sargiskhachatryan/Desktop/project/gl/gl/vShader_offset.vsh", "/Users/sargiskhachatryan/Desktop/project/gl/gl/fShader.fsh");
+    shader_class::Shader shaderProgram("/Users/sargiskhachatryan/Desktop/project/gl/gl/vShader_pass.vsh", "/Users/sargiskhachatryan/Desktop/project/gl/gl/fShader.fsh");
     
-    float vertices[] = {
-        0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 0.0f, // bottom right
-        -0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f, // bottom left
-        0.0f, 0.5f, 0.0f, 0.0f, 0.0f, 1.0f // top
+    float vertices[] = { // as this values are passed as colors the negative ones will be clamped to 0.0f
+        0.5f, -0.5f, 0.0f,
+        -0.5f, -0.5f, 0.0f,
+        0.0f, 0.5f, 0.0f,
     };
     
     // create and bind VAO before VBO
@@ -72,15 +72,9 @@ int exercise_6_8__2() {
     // 5) stride (consecutive vertex attribute space)
     // 6) offset of data(where it begins in buffer)
     // @note last VBO bound to GL_ARRAY_BUFFER is used by function
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
     // 0 is vertex attribute location (index)
     glEnableVertexAttribArray(0);
-    
-    // set the vertex attributes(colors) pointers
-    // @note last VBO bound to GL_ARRAY_BUFFER is used by function
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
-    // 0 is vertex attribute location (index)
-    glEnableVertexAttribArray(1);
     
     // now we can unbind VBO
     glBindBuffer(GL_ARRAY_BUFFER, 0);
@@ -101,8 +95,6 @@ int exercise_6_8__2() {
         
         // draw
         shaderProgram.use();
-        shaderProgram.setFloat("offset", 0.3f);
-
         glBindVertexArray(VAO);
         
         glDrawArrays(GL_TRIANGLES, 0, 3);
@@ -120,5 +112,5 @@ int exercise_6_8__2() {
     return 0;
 }
 
-} // namespace exercise_6_8__2
+} // namespace exercise_6_8__3
 
