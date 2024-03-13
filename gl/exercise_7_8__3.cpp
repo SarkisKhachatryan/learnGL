@@ -1,19 +1,19 @@
 //
-//  master.cpp
+//  exercise_7_8__3.cpp
 //  gl
 //
-//  Created by Sargis Khachatryan on 09.03.24.
+//  Created by Sargis Khachatryan on 11.03.24.
 //
 
-#include "master.hpp"
+#include "exercise_7_8__3.hpp"
 
 #include "shader_class.hpp"
 
 // coment or uncomment this define preprocessor whenever you want to run this file
-//#define STB_IMAGE_IMPLEMENTATION
+#define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.hpp"
 
-namespace master {
+namespace exercise_7_8__3 {
 
 void processInput(GLFWwindow *window) {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
@@ -21,7 +21,7 @@ void processInput(GLFWwindow *window) {
     }
 }
 
-int master() {
+int exercise_7_8__3() {
     
     glfwInit();
     
@@ -44,8 +44,8 @@ int master() {
     
     
     // use encapsulated shader class for compilation and linking of shaders
-    shader_class::Shader shaderProgram("/Users/sargiskhachatryan/Desktop/project/gl/gl/vShader_v2.vsh", "/Users/sargiskhachatryan/Desktop/project/gl/gl/fShader_v3.fsh");
-
+    shader_class::Shader shaderProgram("/Users/sargiskhachatryan/Desktop/project/gl/gl/vShader_v2.vsh", "/Users/sargiskhachatryan/Desktop/project/gl/gl/fShader_v4.fsh");
+    
     float vertices[] = {
         // positions          // colors           // texture coords
          0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f, // top right
@@ -53,6 +53,15 @@ int master() {
         -0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f, // bottom left
         -0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f  // top left
     };
+    
+    // change texture cordinates to zoom in the center of image:
+//    // texture coords
+//    0.55f, 0.55f, // top right
+//    0.55f, 0.45f, // bottom right
+//    0.45f, 0.45f, // bottom left
+//    0.45f, 0.55f  // top left
+//    
+    
     unsigned int indices[] = {
         0, 1, 3, // first triangle
         1, 2, 3  // second triangle
@@ -218,7 +227,7 @@ int master() {
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
-
+    
     glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);
     glDeleteBuffers(1, &EBO);
@@ -228,4 +237,4 @@ int master() {
     return 0;
 }
 
-} // namespace master
+} // namespace exercise_7_8__3

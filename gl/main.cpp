@@ -22,11 +22,12 @@
 #include "main_till_7_7.hpp"
 #include "main_till_7_8.hpp"
 
+#include "exercise_7_8__1.hpp"
+#include "exercise_7_8__2.hpp"
+#include "exercise_7_8__3.hpp"
 
 #include "shader_class.hpp"
-
 #include "master.hpp"
-
 
 
 int main() {
@@ -41,9 +42,11 @@ int main() {
 //    exercise_6_8__3::exercise_6_8__3();
 //    main_till_7_7::main_till_7_7();
 //    main_till_7_8::main_till_7_8();
+//    exercise_7_8__1::exercise_7_8__1();
+//    exercise_7_8__2::exercise_7_8__2();
+    exercise_7_8__3::exercise_7_8__3();
 
-    
-    master::master();
+//    master::master();
 
     return 0;
 }

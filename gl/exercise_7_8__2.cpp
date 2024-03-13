@@ -1,11 +1,11 @@
 //
-//  master.cpp
+//  exercise_7_8__2.cpp
 //  gl
 //
-//  Created by Sargis Khachatryan on 09.03.24.
+//  Created by Sargis Khachatryan on 11.03.24.
 //
 
-#include "master.hpp"
+#include "exercise_7_8__2.hpp"
 
 #include "shader_class.hpp"
 
@@ -13,7 +13,7 @@
 //#define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.hpp"
 
-namespace master {
+namespace exercise_7_8__2 {
 
 void processInput(GLFWwindow *window) {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
@@ -21,7 +21,7 @@ void processInput(GLFWwindow *window) {
     }
 }
 
-int master() {
+int exercise_7_8__2() {
     
     glfwInit();
     
@@ -45,7 +45,7 @@ int master() {
     
     // use encapsulated shader class for compilation and linking of shaders
     shader_class::Shader shaderProgram("/Users/sargiskhachatryan/Desktop/project/gl/gl/vShader_v2.vsh", "/Users/sargiskhachatryan/Desktop/project/gl/gl/fShader_v3.fsh");
-
+    
     float vertices[] = {
         // positions          // colors           // texture coords
          0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f, // top right
@@ -218,7 +218,7 @@ int master() {
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
-
+    
     glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);
     glDeleteBuffers(1, &EBO);
@@ -228,4 +228,4 @@ int master() {
     return 0;
 }
 
-} // namespace master
+} // namespace exercise_7_8__2
