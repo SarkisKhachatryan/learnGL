@@ -33,3 +33,8 @@ try to answer the following question: why is the bottom-left side of our triangl
 
 <img width="1195" alt="Screenshot 2024-03-11 at 01 59 57" src="https://github.com/SarkisKhachatryan/learnGL/assets/53656092/7775dd74-510e-4077-9f36-e4c5fb1544ed">
 
+# 8) added second texture, blend them together, specify sampler location using uniforms trough shader class
+
+<img width="1198" alt="Screenshot 2024-03-14 at 00 29 59" src="https://github.com/SarkisKhachatryan/learnGL/assets/53656092/0b88f751-64dd-482b-9129-e55ffe3d59a4">
+
+
