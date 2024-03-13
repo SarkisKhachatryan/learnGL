@@ -22,6 +22,7 @@
 		0F94C3AA2B9613E6002E4D10 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F94C3A92B9613E6002E4D10 /* main.cpp */; };
 		0F94C3B22B9613F5002E4D10 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F94C3B12B9613F5002E4D10 /* OpenGL.framework */; };
 		0F94C3B42B9614A9002E4D10 /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F94C3B32B9614A9002E4D10 /* libglfw.3.4.dylib */; };
+		0FEA7FEB2B9F9D8C00E72697 /* main_till_7_8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0FEA7FE92B9F9D8C00E72697 /* main_till_7_8.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -74,6 +75,10 @@
 		0F94C3A92B9613E6002E4D10 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		0F94C3B12B9613F5002E4D10 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		0F94C3B32B9614A9002E4D10 /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = ../../../../../opt/homebrew/Cellar/glfw/3.4/lib/libglfw.3.4.dylib; sourceTree = "<group>"; };
+		0FEA7FE92B9F9D8C00E72697 /* main_till_7_8.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main_till_7_8.cpp; sourceTree = "<group>"; };
+		0FEA7FEA2B9F9D8C00E72697 /* main_till_7_8.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = main_till_7_8.hpp; sourceTree = "<group>"; };
+		0FEA7FEC2BA2409F00E72697 /* fShader_v3.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = fShader_v3.fsh; sourceTree = "<group>"; };
+		0FEA7FED2BA2417200E72697 /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awesomeface.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +119,8 @@
 				0F3728022B9CBFB400C38DE5 /* main_till_6_8.cpp */,
 				0F3728032B9CBFB400C38DE5 /* main_till_6_8.hpp */,
 				0F29DCD52B9E63320090F75A /* main_till_7_7.cpp */,
+				0FEA7FE92B9F9D8C00E72697 /* main_till_7_8.cpp */,
+				0FEA7FEA2B9F9D8C00E72697 /* main_till_7_8.hpp */,
 				0F29DCD62B9E63320090F75A /* main_till_7_7.hpp */,
 				0F37281A2B9E487B00C38DE5 /* stb_image.hpp */,
 				0F37280B2B9CF5A200C38DE5 /* master.cpp */,
@@ -127,7 +134,9 @@
 				0F3728112B9CF6D300C38DE5 /* vShader_upside_down.vsh */,
 				0F37281B2B9E4D2000C38DE5 /* container.jpg */,
 				0F37280A2B9CEF5D00C38DE5 /* fShader.fsh */,
+				0FEA7FED2BA2417200E72697 /* awesomeface.png */,
 				0F37281D2B9E520C00C38DE5 /* fShader_v2.fsh */,
+				0FEA7FEC2BA2409F00E72697 /* fShader_v3.fsh */,
 				0F3727FA2B9B547000C38DE5 /* main_till_5_8.hpp */,
 				0F3727F32B9B4FAF00C38DE5 /* exercise_5_8__2.cpp */,
 				0F3727FF2B9CBE8300C38DE5 /* main_till_6_5.cpp */,
@@ -223,6 +232,7 @@
 				0F3727F42B9B4FAF00C38DE5 /* exercise_5_8__2.cpp in Sources */,
 				0F29DCD72B9E63320090F75A /* main_till_7_7.cpp in Sources */,
 				0F3728072B9CECF900C38DE5 /* shader_class.cpp in Sources */,
+				0FEA7FEB2B9F9D8C00E72697 /* main_till_7_8.cpp in Sources */,
 				0F3728012B9CBE8300C38DE5 /* main_till_6_5.cpp in Sources */,
 				0F3728142B9CF7D100C38DE5 /* exercise_6_8__2.cpp in Sources */,
 				0F3727FE2B9B6D7A00C38DE5 /* exercise_5_8__3.cpp in Sources */,
