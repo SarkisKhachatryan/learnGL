@@ -44,9 +44,9 @@ int main() {
 //    main_till_7_8::main_till_7_8();
 //    exercise_7_8__1::exercise_7_8__1();
 //    exercise_7_8__2::exercise_7_8__2();
-    exercise_7_8__3::exercise_7_8__3();
+//    exercise_7_8__3::exercise_7_8__3();
 
-//    master::master();
+    master::master();
 
     return 0;
 }

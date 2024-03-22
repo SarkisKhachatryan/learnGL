@@ -10,7 +10,7 @@
 #include "shader_class.hpp"
 
 // coment or uncomment this define preprocessor whenever you want to run this file
-//#define STB_IMAGE_IMPLEMENTATION
+#define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.hpp"
 
 namespace master {

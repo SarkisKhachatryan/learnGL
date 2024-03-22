@@ -10,14 +10,28 @@
 #include "shader_class.hpp"
 
 // coment or uncomment this define preprocessor whenever you want to run this file
-#define STB_IMAGE_IMPLEMENTATION
+//#define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.hpp"
 
 namespace exercise_7_8__3 {
 
+float fadeValue = 0.5f;
+
 void processInput(GLFWwindow *window) {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
         glfwSetWindowShouldClose(window, true);
+    }
+    
+    if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS) {
+        if (fadeValue > 0.01f) {
+            fadeValue -= 0.005f;
+        }
+    }
+    
+    if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS) {
+        if (fadeValue < 0.98f) {
+            fadeValue += 0.005f;
+        }
     }
 }
 
@@ -44,7 +58,7 @@ int exercise_7_8__3() {
     
     
     // use encapsulated shader class for compilation and linking of shaders
-    shader_class::Shader shaderProgram("/Users/sargiskhachatryan/Desktop/project/gl/gl/vShader_v2.vsh", "/Users/sargiskhachatryan/Desktop/project/gl/gl/fShader_v4.fsh");
+    shader_class::Shader shaderProgram("/Users/sargiskhachatryan/Desktop/project/gl/gl/vShader_v2.vsh", "/Users/sargiskhachatryan/Desktop/project/gl/gl/fShader_v5.fsh");
     
     float vertices[] = {
         // positions          // colors           // texture coords
@@ -214,6 +228,7 @@ int exercise_7_8__3() {
 
         // draw
         shaderProgram.use();
+        shaderProgram.setFloat("fade", fadeValue);
         glBindVertexArray(VAO);
         
         // render the triangles from an index buffer.

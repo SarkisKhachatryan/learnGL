@@ -74,6 +74,7 @@
 		0F37281B2B9E4D2000C38DE5 /* container.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = container.jpg; sourceTree = "<group>"; };
 		0F37281C2B9E51F600C38DE5 /* vShader_v2.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = vShader_v2.vsh; sourceTree = "<group>"; };
 		0F37281D2B9E520C00C38DE5 /* fShader_v2.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = fShader_v2.fsh; sourceTree = "<group>"; };
+		0F669EE02BAE083F002F1090 /* fShader_v5.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = fShader_v5.fsh; sourceTree = "<group>"; };
 		0F94C3A62B9613E6002E4D10 /* gl */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gl; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F94C3A92B9613E6002E4D10 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		0F94C3B12B9613F5002E4D10 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -154,6 +155,7 @@
 				0F37281D2B9E520C00C38DE5 /* fShader_v2.fsh */,
 				0FEA7FEC2BA2409F00E72697 /* fShader_v3.fsh */,
 				0FEA7FF12BA247BF00E72697 /* fShader_v4.fsh */,
+				0F669EE02BAE083F002F1090 /* fShader_v5.fsh */,
 				0F3727FA2B9B547000C38DE5 /* main_till_5_8.hpp */,
 				0F3727F32B9B4FAF00C38DE5 /* exercise_5_8__2.cpp */,
 				0F3727FF2B9CBE8300C38DE5 /* main_till_6_5.cpp */,
